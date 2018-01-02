@@ -1,0 +1,16 @@
+<div class="wrap-login">
+  <div class="txt-welcome">Welcome Tra.B</div>
+  <div class="box-center">
+    <form class="form-login" (ngSubmit)="onLogin()">
+      <div class="inp">
+        <div class="lab">ID:</div>
+        <input type="text" [(ngModel)]="user.id" name="id">
+      </div>
+      <div class="inp">
+        <div class="lab">Password:</div>
+        <input type="password" [(ngModel)]="user.password" name="password">
+      </div>
+      <button class="btn-login">Login</button>
+    </form>
+  </div>
+</div>
