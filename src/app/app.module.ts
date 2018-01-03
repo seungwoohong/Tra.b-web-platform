@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+import { AjaxService } from './services';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
@@ -20,7 +22,9 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    AjaxService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

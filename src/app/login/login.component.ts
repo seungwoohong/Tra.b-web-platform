@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AjaxService } from '../services';
 
 @Component({
     selector: 'login',
@@ -7,14 +8,13 @@ import { Router, ActivatedRoute } from '@angular/router';
     styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-    constructor() {
+    constructor(private ajaxService: AjaxService) {
 
     }
 
     user: any = {};
 
     onLogin() {
-        console.log('id',this.user.id);
-        console.log('password',this.user.password);
+        this.ajaxService.login(this.user.id, this.user.password);
     }
 }
